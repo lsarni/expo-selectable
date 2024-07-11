@@ -1,70 +1,52 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { Text } from "react-native";
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <Text selectable style={{ margin: 20 }}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor arcu
+      at pretium porttitor. In iaculis mollis diam dignissim venenatis. Praesent
+      tincidunt ligula vitae lacus lacinia sagittis. Praesent mattis odio non
+      posuere feugiat. Duis turpis tellus, dictum eu scelerisque eu, semper a
+      ipsum. Sed et mi nibh. Aliquam dignissim nunc vel augue malesuada rutrum.
+      Mauris vehicula pharetra ligula, in euismod tortor suscipit eu. Fusce
+      vitae metus eu magna vulputate dapibus. Sed vel nisl convallis, dictum
+      ante nec, venenatis est. Nullam sit amet dui congue, aliquam odio id,
+      volutpat nunc. Fusce accumsan congue tellus, pellentesque maximus purus
+      convallis vel. Proin euismod lobortis neque eget pretium. Donec eu est sit
+      amet libero faucibus egestas. Nam consequat pharetra massa consectetur
+      mattis. Morbi orci nibh, facilisis id diam non, molestie aliquet sapien.
+      Quisque eu nulla id diam condimentum faucibus eget in felis. Aliquam
+      commodo, odio luctus blandit ultrices, lectus leo vehicula odio, quis
+      hendrerit urna tortor et elit. Maecenas sed sagittis felis. Pellentesque
+      vulputate neque vitae leo fermentum, ut fermentum ante vulputate. Maecenas
+      lectus lectus, gravida sit amet sem in, pellentesque suscipit felis.
+      Vestibulum pulvinar lobortis ante sed congue. Integer purus eros,
+      hendrerit ut massa eget, elementum sollicitudin tellus. Nulla facilisi.
+      Nulla ornare diam at nibh ornare volutpat. Maecenas libero augue, placerat
+      ut ultricies id, elementum sit amet odio. Sed risus massa, placerat at
+      auctor sed, placerat non nisi. Donec eu rhoncus elit, eget luctus nunc.
+      Sed pellentesque venenatis iaculis. Proin vel cursus enim. Cras lacinia
+      sapien quis sodales sagittis. Aliquam porttitor velit diam, a vehicula
+      mauris dapibus a. Mauris ut lobortis metus. Quisque tempor gravida nunc.
+      Curabitur vitae felis ullamcorper, egestas enim id, dictum quam. Sed
+      mattis eget eros quis pretium. Cras egestas vulputate ante, ullamcorper
+      dignissim risus lobortis sit amet. Nullam accumsan luctus auctor. Ut
+      iaculis mauris nec tellus dictum sagittis. Quisque velit urna, iaculis
+      euismod congue eleifend, elementum vel ligula. Aenean tempor hendrerit
+      mauris in facilisis. Duis eros mi, posuere et porta scelerisque, tincidunt
+      at dui. Fusce enim ipsum, tincidunt ut nunc eget, molestie lobortis odio.
+      Aliquam ipsum eros, aliquet sit amet ante luctus, dignissim pretium elit.
+      Proin quis sem molestie quam dignissim faucibus eu ut urna. Morbi
+      vestibulum enim in nisi sodales mattis. Integer condimentum, enim vel
+      rhoncus sodales, augue elit finibus ligula, nec facilisis arcu magna in
+      lorem. Sed ornare, quam fringilla ornare ultricies, enim dolor pharetra
+      est, eget volutpat augue nisi sit amet odio. Morbi laoreet placerat
+      molestie. Curabitur eget mi sit amet sapien tincidunt fermentum et vel mi.
+      Proin feugiat congue lacus, faucibus ultricies turpis finibus ac.
+      Suspendisse eleifend augue tristique volutpat elementum. Proin vitae ex
+      fermentum, hendrerit augue a, lobortis ipsum. In eu molestie leo. Nunc
+      dictum pretium varius. Mauris id nisl vitae purus facilisis volutpat nec
+      nec sem. Suspendisse ut enim posuere ligula consequat malesuada a ut nibh.
+    </Text>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
